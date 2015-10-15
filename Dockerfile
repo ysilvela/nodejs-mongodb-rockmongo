@@ -3,7 +3,7 @@ MAINTAINER Yago Silvela
 
 #######################  NODE
 RUN apt-get update
-RUN apt-get install nodejs
+RUN apt-get install -y nodejs
 
 #######################  MONGO
 
