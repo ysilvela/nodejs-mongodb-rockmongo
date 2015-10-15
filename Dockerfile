@@ -6,12 +6,8 @@ RUN echo "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen
 RUN apt-get -y update
 RUN apt-get -y install mongodb-10gen
 
-RUN easy_install supervisor
-RUN echo_supervisord_conf > /etc/supervisord.conf
-RUN printf "[include]\nfiles = /var/www/Supervisorfile\n" >> /etc/supervisord.conf
-
 ADD . /var/www
 
 RUN cd /var/www ; npm install 
 
-CMD ["/usr/local/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"] 
+
