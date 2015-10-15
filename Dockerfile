@@ -1,5 +1,9 @@
-FROM node:4.2.1
+FROM ubuntu
 MAINTAINER Yago Silvela 
+
+#######################  NODE
+RUN apt-get update
+RUN apt-get install nodejs
 
 #######################  MONGO
 
