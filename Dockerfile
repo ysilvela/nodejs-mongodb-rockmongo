@@ -13,6 +13,8 @@ RUN echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiver
 RUN apt-get update
 RUN apt-get install -y mongodb-org
 
+ENV MONGO_HOST 127.0.0.1
+
 #########################    APACHE
 # install required
 RUN apt-get install -q -y build-essential apache2 php5 libapache2-mod-php5 php5-dev php-pear wget unzip
