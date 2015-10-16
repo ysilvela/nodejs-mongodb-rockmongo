@@ -5,7 +5,7 @@ MAINTAINER Yago Silvela
 RUN apt-get update
 RUN apt-get install -y nodejs
 
-#######################  MONGO
+#######################  MONGO JS
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mongodb && useradd -r -g mongodb mongodb
