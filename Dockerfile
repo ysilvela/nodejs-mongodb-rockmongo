@@ -46,6 +46,8 @@ RUN cat /etc/php5/conf.d/mongo.ini | grep mongo.so
 
 #RUN echo '<?php phpInfo(); ?>' > /var/www/html/info.php
 
+COPY config.php /var/www/html/config.php
+
 ####################   LAST
 
 ENTRYPOINT ["/usr/sbin/apache2"]
