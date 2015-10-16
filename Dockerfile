@@ -15,6 +15,8 @@ RUN apt-get install -y mongodb-org
 
 ENV MONGO_HOST 127.0.0.1
 
+CMD ["mongod"]
+
 #########################    APACHE
 # install required
 RUN apt-get install -q -y build-essential apache2 php5 libapache2-mod-php5 php5-dev php-pear wget unzip
